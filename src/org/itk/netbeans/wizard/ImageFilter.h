@@ -19,14 +19,14 @@ public:
 
     /** input image typedefs */
     typedef TInputImage InputImageType;
-    typedef Superclass::InputImageConstPointer InputImageConstPointer;
+    typedef typename Superclass::InputImageConstPointer InputImageConstPointer;
     typedef typename InputImageType::RegionType InputImageRegionType;
     typedef typename InputImageType::PixelType InputImagePixelType;
 
     /** output image typedefs */
     typedef TOutputImage OutputImageType;
-    typedef Superclass::OutputImagePointer OutputImagePointer;
-    typedef Superclass::OutputImageRegionType OutputImageRegionType;
+    typedef typename Superclass::OutputImagePointer OutputImagePointer;
+    typedef typename Superclass::OutputImageRegionType OutputImageRegionType;
     typedef typename Superclass::OutputImagePixelType OutputImagePixelType;
 
     /** ImageDimension constants */
