@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.itk.netbeans.wizard
+OpenIDE-Module-Localizing-Bundle: org/itk/netbeans/wizard/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
