@@ -91,15 +91,15 @@ public final class NewItkFilterWizardIterator implements WizardDescriptor.Instan
         FileObject sourceTemplate = Templates.getTemplate(wizard);
         FileObject headerTemplate = FileUtil.findBrother(sourceTemplate, "h");
         if (headerTemplate != null) {
-            DataObject dobjSource = DataObject.find(headerTemplate);
-            files.add(dobjSource.createFromTemplate(targetFolderName, className, args));
+            DataObject dobjHeader = DataObject.find(headerTemplate);
+            files.add(dobjHeader.createFromTemplate(targetFolderName, className, args));
         }
 
-        DataObject dHeaderTemplate = DataObject.find(sourceTemplate);
+        DataObject dobjSource = DataObject.find(sourceTemplate);
 
         //Define the template from the above,
         //passing the package, the file name, and the map of strings to the template:
-        DataObject dobj = dHeaderTemplate.createFromTemplate(targetFolderName, className, args);
+        DataObject dobj = dobjSource.createFromTemplate(targetFolderName, className, args);
         files.add(dobj);
 
         return files;
