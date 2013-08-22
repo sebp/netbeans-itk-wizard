@@ -14,6 +14,7 @@ import org.netbeans.api.project.ProjectUtils;
 import org.netbeans.api.project.SourceGroup;
 import org.netbeans.api.project.Sources;
 import org.netbeans.api.templates.TemplateRegistration;
+import org.netbeans.api.templates.TemplateRegistrations;
 import org.openide.WizardDescriptor;
 import org.netbeans.spi.project.ui.templates.support.Templates;
 import org.openide.filesystems.FileObject;
@@ -21,14 +22,23 @@ import org.openide.filesystems.FileUtil;
 import org.openide.loaders.DataFolder;
 import org.openide.loaders.DataObject;
 
-// TODO define position attribute
-@TemplateRegistration(
+@TemplateRegistrations({
+    @TemplateRegistration(
         folder = "cppFiles",
         displayName = "#ItkFilterWizardIterator_displayName",
         iconBase = "org/itk/netbeans/wizard/itk_favicon.png",
         description = "newItkFilter.html",
-        content = {"ImageFilter.hxx", "ImageFilter.h"},
+        content = "ImageFilter.hxx",
+        position = 600,
+        scriptEngine = "freemarker"),
+
+    @TemplateRegistration(
+        folder = "cppFiles",
+        content = "ImageFilter.h",
+        position = 610,
+        category = "hidden",
         scriptEngine = "freemarker")
+})
 public final class NewItkFilterWizardIterator implements WizardDescriptor.InstantiatingIterator<WizardDescriptor> {
 
     private int index;
