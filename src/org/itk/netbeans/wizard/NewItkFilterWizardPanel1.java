@@ -18,8 +18,8 @@ import org.openide.util.NbBundle;
 
 public class NewItkFilterWizardPanel1 implements WizardDescriptor.Panel<WizardDescriptor> {
 
-    static final String PROP_PARENT_CLASS_NAME = "parentClassName";
-    static final String PROP_MULTI_THREADED = "multiThreaded";
+    static final String PROP_PARENT_CLASS_NAME = "parentClassName";// NOI18N
+    static final String PROP_MULTI_THREADED = "multiThreaded";// NOI18N
     /**
      * The visual component that displays this panel. If you need to access the
      * component from this class, just use getComponent().

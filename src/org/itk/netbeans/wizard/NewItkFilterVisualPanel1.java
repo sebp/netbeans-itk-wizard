@@ -21,8 +21,8 @@ import org.openide.util.NbBundle;
 
 public final class NewItkFilterVisualPanel1 extends JPanel {
 
-    private static final String sourceExt = "hxx";
-    private static final String headerExt = "h";
+    private static final String sourceExt = "hxx"; // NOI18N
+    private static final String headerExt = "h"; // NOI18N
     private Project project;
     private SourceGroup[] folders;
 

@@ -75,10 +75,10 @@ public final class NewItkFilterWizardIterator implements WizardDescriptor.Instan
         // FreeMarker Template will get its variables from HashMap.
         // HashMap key is the variable name.
         Map<String, Object> args = new HashMap<String, Object>();
-        args.put("className", className);
-        args.put("parentClassName", wizard.getProperty(
+        args.put("className", className); // NOI18N
+        args.put("parentClassName", wizard.getProperty( // NOI18N
                 NewItkFilterWizardPanel1.PROP_PARENT_CLASS_NAME));
-        args.put("multiThreaded", wizard.getProperty(
+        args.put("multiThreaded", wizard.getProperty( // NOI18N
                 NewItkFilterWizardPanel1.PROP_MULTI_THREADED));
 
         LinkedHashSet<DataObject> files = new LinkedHashSet<DataObject>();
@@ -89,7 +89,7 @@ public final class NewItkFilterWizardIterator implements WizardDescriptor.Instan
 
         //Get the template and convert it:
         FileObject sourceTemplate = Templates.getTemplate(wizard);
-        FileObject headerTemplate = FileUtil.findBrother(sourceTemplate, "h");
+        FileObject headerTemplate = FileUtil.findBrother(sourceTemplate, "h"); // NOI18N
         if (headerTemplate != null) {
             DataObject dobjHeader = DataObject.find(headerTemplate);
             files.add(dobjHeader.createFromTemplate(targetFolderName, className, args));
