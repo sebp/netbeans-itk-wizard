@@ -6,7 +6,7 @@
 namespace itk
 {
 template<class TInputImage, class TOutputImage>
-class ${className} : public ${parentClassName}<TInputImage, TOutputImage>
+class ITK_EXPORT ${className} : public ${parentClassName}<TInputImage, TOutputImage>
 {
 public:
     /** Standard class typedefs. */
