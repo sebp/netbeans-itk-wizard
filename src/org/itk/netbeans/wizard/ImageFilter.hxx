@@ -20,7 +20,11 @@ ${className}<TInputImage, TOutputImage>::PrintSelf(std::ostream & os, Indent ind
 
 template<class TInputImage, class TOutputImage>
 void
+<#if multiThreaded>
+${className}<TInputImage, TOutputImage>::ThreadedGenerateData(const OutputImageRegionType& outputRegion, ThreadIdType threadId)
+<#else>
 ${className}<TInputImage, TOutputImage>::GenerateData()
+</#if>
 {
    InputImageConstPointer input = this->GetInput();
    OutputImagePointer output = this->GetOutput();
